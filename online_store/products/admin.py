@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from products.models import ProductCategory, Product
+
+# Регистрация моделей нужна для их отображения в админке
+admin.site.register(Product)
+admin.site.register(ProductCategory)
+

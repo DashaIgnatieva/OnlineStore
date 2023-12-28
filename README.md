@@ -5,7 +5,7 @@
 ## Запуск проекта
 1. Склонируйте репозиторий на компьютер
 ```
-git clone https://github.com/DashaIgnatieva/InternetStore.git
+git clone https://github.com/DashaIgnatieva/OnlineStore.git
 ```
 2. Установите и активируйте виртуальную среду
 ```
