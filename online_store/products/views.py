@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-# Create your views here.
+from products.models import ProductCategory, Product
 
 def index(request):
     context = {
@@ -12,25 +12,7 @@ def index(request):
 def products(request):
     context = {
         "title": "Магазин | Каталог",
-        "products": [
-            {
-                "image":"static/vendor/img/products/product1_mice.jpg",
-                "name":"Кормовые мыши",
-                "prise":100,
-                "description":"Кормовые мыши разных размеров."
-            },
-            {
-                "image":"static/vendor/img/products/product1_mice.jpg",
-                "name":"Кормовые мыши",
-                "prise":100,
-                "description":"Кормовые мыши разных размеров."
-            },
-            {
-                "image":"static/vendor/img/products/product1_mice.jpg",
-                "name":"Кормовые мыши",
-                "prise":100,
-                "description":"Кормовые мыши разных размеров."
-            }
-        ]
+        "products": Product.objects.all(),
+        "categories": ProductCategory.objects.all()
     }
     return render(request, 'products/products.html', context=context)
